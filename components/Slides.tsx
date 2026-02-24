@@ -34,8 +34,7 @@ export const Slide1: React.FC<SlideProps> = ({ isActive, onStart }) => (
         新质生产力 · 协同赋能方案
       </div>
       <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-[1.1]">
-        不锈钢全产业链<br/>
-        <span className="gradient-text">绿色智能制造示范项目</span>
+        <span className="gradient-text">基于数字孪生的不锈钢全产业链绿色工艺系统研发及产业化</span>
       </h1>
       <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-4xl mx-auto font-light leading-relaxed">
         利用"苏州装备供应链 + 自主AI算法"，重构传统制造业利润体系
@@ -58,7 +57,7 @@ export const Slide1: React.FC<SlideProps> = ({ isActive, onStart }) => (
             <p className="text-slate-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-4">CEO / 战略规划</p>
             <div className="flex items-baseline gap-4">
               <span className="text-4xl font-bold text-white tracking-tight">周君</span>
-              <span className="text-slate-400 text-base font-medium">前百亿基金经理</span>
+              <span className="text-slate-400 text-base font-medium">前百亿基金经理/CFA/FRM</span>
             </div>
           </div>
           <div>
@@ -259,8 +258,8 @@ export const Slide5: React.FC<SlideProps> = ({ isActive }) => (
 );
 
 export const Slide6: React.FC<SlideProps> = ({ isActive }) => (
-  <div className="p-16 h-full flex flex-col justify-center">
-    <h2 className="text-5xl font-black mb-16">技术模块三：“精密手”——拼焊与智后道</h2>
+  <div className="p-16 pb-32 h-full flex flex-col justify-center">
+    <h2 className="text-5xl font-black mb-16">技术模块三：“精密手”——拼焊与全自动流转</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
       <div className="flex flex-col justify-center space-y-8">
         <div>
@@ -278,6 +277,37 @@ export const Slide6: React.FC<SlideProps> = ({ isActive }) => (
              <div className="text-slate-500 text-[10px] font-black uppercase mb-1">无缝增宽率</div>
              <div className="text-4xl font-black">100%</div>
           </div>
+        </div>
+        <div className="glass p-6 rounded-2xl border border-slate-700">
+           <div className="flex items-start gap-4">
+             <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-400">
+                 <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                 <path d="M6 10h.01"></path>
+                 <path d="M10 10h.01"></path>
+                 <path d="M14 10h.01"></path>
+                 <path d="M18 10h.01"></path>
+               </svg>
+             </div>
+             <div>
+               <h4 className="text-white font-bold text-lg mb-1">柔性抛光</h4>
+               <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-3">Flexible Polishing</p>
+               <div className="text-xs text-slate-400 space-y-2">
+                 <div className="flex items-start gap-2">
+                   <span className="text-green-400 mt-1">•</span>
+                   <span>六轴柔性机器人配合力控反馈</span>
+                 </div>
+                 <div className="flex items-start gap-2">
+                   <span className="text-green-400 mt-1">•</span>
+                   <span>异形件 360度无死角贴合抛光</span>
+                 </div>
+                 <div className="flex items-start gap-2">
+                   <span className="text-green-400 mt-1">•</span>
+                   <span>打破高端工艺品量产瓶颈</span>
+                 </div>
+               </div>
+             </div>
+           </div>
         </div>
         <div className="glass p-6 rounded-2xl border-dashed border-slate-700">
            <h4 className="text-white font-bold mb-2 flex items-center gap-2"><Zap /> 无人化包装矩阵</h4>
@@ -569,7 +599,7 @@ export const Slide10: React.FC<SlideProps> = ({ isActive }) => (
                 <div className="absolute -right-1 -top-1 w-3 h-3 rounded-full bg-slate-500/60"></div>
                 <h5 className="text-blue-400 font-black text-xs mb-2">在线质控模块</h5>
                 <p className="text-slate-400 text-xs">天瑞仪器</p>
-                <p className="text-slate-400 text-xs">天隆科技</p>
+                <p className="text-slate-400 text-xs">天准科技</p>
               </div>
               <div className="absolute left-[-40px] bottom-[-40px] w-[60px] h-[60px] border-l-2 border-b-2 border-dashed border-slate-500/30 rounded-bl-xl"></div>
             </div>
@@ -589,7 +619,7 @@ export const Slide10: React.FC<SlideProps> = ({ isActive }) => (
               <div className="glass rounded-xl border border-slate-600/60 p-4 min-w-[140px] text-center relative">
                 <div className="absolute -right-1 -top-1 w-3 h-3 rounded-full bg-slate-500/60"></div>
                 <h5 className="text-blue-400 font-black text-xs mb-2">精密加工模块</h5>
-                <p className="text-slate-400 text-xs">鑫龙激光</p>
+                <p className="text-slate-400 text-xs">德龙激光</p>
                 <p className="text-slate-400 text-xs">领创激光</p>
               </div>
               <div className="absolute left-[-40px] top-[-40px] w-[60px] h-[60px] border-l-2 border-t-2 border-dashed border-slate-500/30 rounded-tl-xl"></div>
