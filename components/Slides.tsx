@@ -33,8 +33,8 @@ export const Slide1: React.FC<SlideProps> = ({ isActive, onStart }) => (
       <div className="inline-block px-4 py-1 mb-8 rounded-full glass border-blue-500/40 text-blue-400 font-bold text-xs tracking-widest uppercase animate-pulse-soft">
         新质生产力 · 协同赋能方案
       </div>
-      <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-[1.1]">
-        <span className="gradient-text">基于数字孪生的不锈钢全产业链绿色工艺系统研发及产业化</span>
+      <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-8 tracking-tighter leading-[1.1] gradient-text">
+        基于数字孪生的不锈钢全产业链绿色工艺系统研发及产业化
       </h1>
       <p className="text-xl md:text-2xl text-slate-400 mb-12 max-w-4xl mx-auto font-light leading-relaxed">
         利用"苏州装备供应链 + 自主AI算法"，重构传统制造业利润体系
@@ -217,7 +217,7 @@ export const Slide5: React.FC<SlideProps> = ({ isActive }) => (
     <div className="flex justify-between items-end mb-12">
       <div>
         <h2 className="text-5xl font-black">技术模块二：“节能心”——HTAC 绿色热能</h2>
-        <p className="text-slate-400 text-xl mt-3 font-light">针对 1050℃ 固溶/热轧工艺的底层重构</p>
+        <p className="text-slate-400 text-xl mt-3 font-light">针对 1050℃ 淬火工艺的底层重构</p>
       </div>
       <div className="text-right glass px-10 py-6 rounded-3xl border-green-500/30 shadow-[0_0_30px_rgba(34,197,94,0.1)]">
         <span className="text-6xl font-black text-green-400 tracking-tighter">20-25%</span>
@@ -245,6 +245,10 @@ export const Slide5: React.FC<SlideProps> = ({ isActive }) => (
         <div className="glass p-8 rounded-3xl border-l-8 border-green-500">
           <h4 className="font-bold text-2xl mb-3">陶瓷蓄热体黑科技</h4>
           <p className="text-slate-400 leading-relaxed text-lg">利用陶瓷蓄热体将助燃空气预热至 <span className="text-green-400 font-black">800℃</span> 以上，突破行业 600℃ 瓶颈。</p>
+        </div>
+        <div className="glass p-8 rounded-3xl border-l-8 border-cyan-500">
+          <h4 className="font-bold text-2xl mb-3">算法内核</h4>
+          <p className="text-slate-400 leading-relaxed text-lg">自研动态空燃比寻优算法，毫秒级精准调控。</p>
         </div>
         <div className="glass p-8 rounded-3xl border-l-8 border-blue-500">
           <h4 className="font-bold text-2xl mb-3">年度财务价值</h4>
