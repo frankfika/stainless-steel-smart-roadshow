@@ -5,15 +5,15 @@ import { jsPDF } from 'jspdf';
 import {
   Slide1, Slide2, Slide3, Slide4, Slide5,
   Slide6, Slide7, Slide8, Slide9, Slide10,
-  Slide11, Slide12
+  Slide11, Slide12, Slide13
 } from './components/Slides';
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(1);
   const [isExporting, setIsExporting] = useState(false);
-  const totalSlides = 12;
-  const slides = [Slide1, Slide2, Slide3, Slide9, Slide4, Slide5, Slide6, Slide7, Slide8, Slide10, Slide11, Slide12];
+  const totalSlides = 13;
+  const slides = [Slide1, Slide2, Slide3, Slide9, Slide4, Slide5, Slide6, Slide7, Slide8, Slide13, Slide10, Slide11, Slide12];
   const pdfContainerRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = useCallback(() => {

@@ -1,0 +1,213 @@
+/* ==========================================================================
+   Merged CSS for all slide pages
+   ========================================================================== */
+
+/* --- Digital Eye (Slide4) Scoped Variables --- */
+.slide-digital-eye {
+  --color-brand-primary: #10b981;
+  --color-brand-secondary: #06b6d4;
+  --color-dark-bg: #0a0a0a;
+  --color-dark-card: #141414;
+}
+
+/* --- SCG Digital Twin (Slide7) Scoped Variables --- */
+.slide-scg {
+  --color-brand-primary: #00f2ff;
+  --color-brand-secondary: #7000ff;
+  --color-bg-dark: #0a0a0c;
+  --color-panel-bg: rgba(20, 20, 25, 0.8);
+}
+
+/* --- Precision Hand (Slide6) Variables --- */
+.slide-precision-hand {
+  --color-industrial-bg: #0A0A0B;
+  --color-industrial-card: #151619;
+  --color-industrial-accent: #00F0FF;
+  --color-industrial-warning: #FFB800;
+  --color-industrial-danger: #FF4444;
+  --color-industrial-success: #00FF66;
+  --color-industrial-border: #2A2C32;
+  --color-industrial-text-dim: #8E9299;
+}
+
+/* ==========================================================================
+   Digital Eye Utilities
+   ========================================================================== */
+
+.slide-digital-eye .glass-panel {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.slide-digital-eye .scan-line {
+  background: linear-gradient(to bottom, transparent, var(--color-brand-primary), transparent);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+.slide-digital-eye .glow-text {
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.slide-digital-eye .bg-dark-bg { background-color: var(--color-dark-bg); }
+.slide-digital-eye .bg-dark-card { background-color: var(--color-dark-card); }
+.slide-digital-eye .text-brand-primary { color: var(--color-brand-primary); }
+.slide-digital-eye .text-brand-secondary { color: var(--color-brand-secondary); }
+.slide-digital-eye .bg-brand-primary { background-color: var(--color-brand-primary); }
+.slide-digital-eye .bg-brand-secondary { background-color: var(--color-brand-secondary); }
+.slide-digital-eye .border-brand-primary { border-color: var(--color-brand-primary); }
+.slide-digital-eye .border-brand-secondary { border-color: var(--color-brand-secondary); }
+
+/* Opacity variants for digital-eye */
+.slide-digital-eye .bg-brand-primary\/5 { background-color: rgba(16, 185, 129, 0.05); }
+.slide-digital-eye .bg-brand-primary\/10 { background-color: rgba(16, 185, 129, 0.1); }
+.slide-digital-eye .bg-brand-primary\/30 { background-color: rgba(16, 185, 129, 0.3); }
+.slide-digital-eye .bg-brand-secondary\/5 { background-color: rgba(6, 182, 212, 0.05); }
+.slide-digital-eye .border-brand-primary\/20 { border-color: rgba(16, 185, 129, 0.2); }
+.slide-digital-eye .border-brand-primary\/30 { border-color: rgba(16, 185, 129, 0.3); }
+.slide-digital-eye .border-brand-secondary\/20 { border-color: rgba(6, 182, 212, 0.2); }
+
+/* ==========================================================================
+   SCG Utilities
+   ========================================================================== */
+
+.slide-scg .glass-panel {
+  background: var(--color-panel-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slide-scg .glow-text {
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.slide-scg .text-brand-primary { color: var(--color-brand-primary); }
+.slide-scg .text-brand-secondary { color: var(--color-brand-secondary); }
+.slide-scg .bg-brand-primary { background-color: var(--color-brand-primary); }
+.slide-scg .bg-brand-secondary { background-color: var(--color-brand-secondary); }
+.slide-scg .border-brand-primary { border-color: var(--color-brand-primary); }
+.slide-scg .bg-bg-dark { background-color: var(--color-bg-dark); }
+
+.slide-scg .bg-brand-primary\/10 { background-color: rgba(0, 242, 255, 0.1); }
+.slide-scg .bg-brand-primary\/20 { background-color: rgba(0, 242, 255, 0.2); }
+.slide-scg .bg-brand-secondary\/10 { background-color: rgba(112, 0, 255, 0.1); }
+.slide-scg .border-brand-primary\/20 { border-color: rgba(0, 242, 255, 0.2); }
+.slide-scg .border-brand-primary\/30 { border-color: rgba(0, 242, 255, 0.3); }
+.slide-scg .shadow-brand-primary\/20 { box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); }
+
+/* ==========================================================================
+   Precision Hand Utilities
+   ========================================================================== */
+
+.slide-precision-hand .grid-bg {
+  background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.slide-precision-hand .scanline {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--color-industrial-accent), transparent);
+  opacity: 0.3;
+  position: absolute;
+  animation: precision-scan 4s linear infinite;
+}
+
+@keyframes precision-scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+.slide-precision-hand .bg-industrial-bg { background-color: var(--color-industrial-bg); }
+.slide-precision-hand .bg-industrial-card { background-color: var(--color-industrial-card); }
+.slide-precision-hand .text-industrial-accent { color: var(--color-industrial-accent); }
+.slide-precision-hand .text-industrial-warning { color: var(--color-industrial-warning); }
+.slide-precision-hand .text-industrial-danger { color: var(--color-industrial-danger); }
+.slide-precision-hand .text-industrial-success { color: var(--color-industrial-success); }
+.slide-precision-hand .text-industrial-text-dim { color: var(--color-industrial-text-dim); }
+.slide-precision-hand .bg-industrial-accent { background-color: var(--color-industrial-accent); }
+.slide-precision-hand .bg-industrial-success { background-color: var(--color-industrial-success); }
+.slide-precision-hand .bg-industrial-warning { background-color: var(--color-industrial-warning); }
+.slide-precision-hand .border-industrial-border { border-color: var(--color-industrial-border); }
+.slide-precision-hand .border-industrial-accent { border-color: var(--color-industrial-accent); }
+
+/* Opacity variants for precision-hand */
+.slide-precision-hand .bg-industrial-accent\/5 { background-color: rgba(0, 240, 255, 0.05); }
+.slide-precision-hand .bg-industrial-accent\/10 { background-color: rgba(0, 240, 255, 0.1); }
+.slide-precision-hand .bg-industrial-accent\/20 { background-color: rgba(0, 240, 255, 0.2); }
+.slide-precision-hand .bg-industrial-accent\/30 { background-color: rgba(0, 240, 255, 0.3); }
+.slide-precision-hand .bg-industrial-success\/10 { background-color: rgba(0, 255, 102, 0.1); }
+.slide-precision-hand .bg-industrial-success\/20 { background-color: rgba(0, 255, 102, 0.2); }
+.slide-precision-hand .bg-industrial-success\/30 { background-color: rgba(0, 255, 102, 0.3); }
+.slide-precision-hand .border-industrial-accent\/20 { border-color: rgba(0, 240, 255, 0.2); }
+.slide-precision-hand .border-industrial-accent\/30 { border-color: rgba(0, 240, 255, 0.3); }
+.slide-precision-hand .border-industrial-accent\/40 { border-color: rgba(0, 240, 255, 0.4); }
+.slide-precision-hand .border-industrial-success\/20 { border-color: rgba(0, 255, 102, 0.2); }
+.slide-precision-hand .border-industrial-success\/50 { border-color: rgba(0, 255, 102, 0.5); }
+
+/* ==========================================================================
+   Financial Expansion Model (Slide13) Utilities
+   ========================================================================== */
+
+.slide-financial .glass-card {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+}
+
+.slide-financial .table-header {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 16px;
+  text-align: right;
+}
+
+.slide-financial .table-header:first-child {
+  text-align: left;
+}
+
+.slide-financial .table-cell {
+  padding: 16px;
+  font-size: 14px;
+  border-top: 1px solid rgba(51, 65, 85, 0.5);
+  text-align: right;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.slide-financial .table-cell:first-child {
+  text-align: left;
+}
+
+.slide-financial .table-row-highlight {
+  background: rgba(30, 41, 59, 0.3);
+  font-weight: 700;
+  color: white;
+}
+
+/* ==========================================================================
+   Custom Scrollbar (shared)
+   ========================================================================== */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 242, 255, 0.3);
+}
