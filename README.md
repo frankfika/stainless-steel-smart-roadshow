@@ -6,8 +6,8 @@
 
 ## 在线访问
 
-- **Cloudflare Pages**: https://stainless-steel-smart-roadshow.pages.dev
-- **EdgeOne Pages**: https://stainless-steel-roadshow-schnhdav.edgeone.cool （需绑定自定义域名后公开访问）
+- **国内访问**: https://roadshow.secondplanet.cc
+- **海外访问**: https://stainless-steel-smart-roadshow.pages.dev
 
 ## 本地运行
 
