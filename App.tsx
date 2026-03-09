@@ -200,16 +200,6 @@ const App: React.FC = () => {
         </div>
       </div>
 
-      {/* Institutional Branding */}
-      <div className="fixed bottom-10 left-10 z-50 flex items-center gap-4 no-print">
-        <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-slate-950 font-black text-2xl shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-          S
-        </div>
-        <div>
-          <div className="text-sm font-black tracking-widest text-slate-200 uppercase leading-none mb-1">苏州方案 · 智能制造</div>
-          <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">Digital-Twin Integrated Production System</div>
-        </div>
-      </div>
 
       <style>{`
         @keyframes slideInNext {

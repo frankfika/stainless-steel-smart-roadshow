@@ -2,13 +2,13 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, PieChart, Pie, Cell, LineChart, Line, ReferenceLine, ComposedChart, LabelList } from 'recharts';
 import { SlideProps } from '../types';
-import { CheckCircle, AlertTriangle, Zap, ArrowRight } from './Icons';
+import { CheckCircle, AlertTriangle, Zap as ZapIcon, ArrowRight } from './Icons';
 import { motion, AnimatePresence } from 'motion/react';
 import {
-  Eye, Cpu, Database, Activity, ShieldCheck, Search, Layers, Clock, BarChart3,
+  Eye, Cpu, Database, Activity, ShieldCheck, Search, Layers, Clock, BarChart3, Zap,
   Flame, TrendingDown, Thermometer, Droplets, ChevronRight, Target, Info,
   TrendingUp, Maximize2, Settings, ArrowUpRight, Box, AlertCircle, DollarSign,
-  ShieldAlert, Package, Disc, Maximize, Sparkles, Scissors,
+  ShieldAlert, Shield, Package, Disc, Maximize, Sparkles, Scissors,
   LayoutDashboard, Rocket, PieChart as PieChartIcon
 } from 'lucide-react';
 import { TechCard } from './digital-eye/TechCard';
@@ -181,75 +181,58 @@ export const Slide3: React.FC<SlideProps> = ({ isActive }) => (
 
 export const Slide4: React.FC<SlideProps> = ({ isActive }) => (
   <div className={`h-full overflow-auto slide-digital-eye transition-all duration-700 ${isActive ? 'opacity-100' : 'opacity-0'}`} style={{ backgroundColor: '#0a0a0a' }}>
-    <main className="relative z-10 max-w-7xl mx-auto px-6 py-8 lg:py-12">
+    <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 lg:py-12">
       {/* Header */}
-      <header className="mb-8 lg:mb-10">
+      <header className="mb-6 sm:mb-8 lg:mb-10">
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-2 mb-3">
           <div className="w-8 h-[1px]" style={{ backgroundColor: '#10b981' }} />
-          <span className="text-xs font-mono uppercase tracking-[0.3em]" style={{ color: '#10b981' }}>核心技术展示 01</span>
+          <span className="text-xs font-mono uppercase tracking-[0.3em]" style={{ color: '#10b981' }}>核心能力 01</span>
         </motion.div>
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-4xl lg:text-6xl font-bold tracking-tighter mb-4">
-          数字眼 <span style={{ color: '#10b981' }}>Digital Eye</span>
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-2xl sm:text-4xl lg:text-6xl font-bold tracking-tighter mb-3 sm:mb-4">
+          数字眼 <span style={{ color: '#10b981' }}>(机器视觉防呆模块)</span>
         </motion.h1>
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-base lg:text-lg text-white/60 max-w-3xl leading-relaxed">
-          前馈感知与极速拦截系统：融合高精度光谱分析与边缘算力，实现工业级无损检测与毫秒级实时拦截。
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-sm sm:text-base lg:text-lg text-white/60 max-w-3xl leading-relaxed">
+          工业级前馈感知系统：集成双层水冷装甲与 FPGA 边缘算力，实现极端环境下的物理级防呆锁死。
         </motion.p>
       </header>
 
       {/* Main Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mb-12">
-        <div className="lg:col-span-8"><DigitalEye /></div>
-        <div className="lg:col-span-4">
-          <TechCard delay={0.3} icon={Eye} title="50ms 边缘拦截" subtitle="极速响应"
-            description="搭载 FPGA 边缘算力，在 50 毫秒内精准拦截物理瑕疵。通过硬件级并行处理，确保生产线零容错运行。"
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-3 sm:gap-4">
+        <div className="md:col-span-2 lg:col-span-8"><DigitalEye /></div>
+        <div className="md:col-span-2 lg:col-span-4">
+          <TechCard delay={0.3} icon={Zap} title="50ms 极速拦截" subtitle="PLC 动力切断"
+            description="FPGA 边缘算力即时判定，50 毫秒内运行切断底层 PLC 动力，实现最高级物理防呆锁死。"
             stats={[{ label: "响应延迟", value: "50ms" }, { label: "处理频率", value: "450MHz" }]}
             className="h-full">
-            <div className="mt-4 pt-4 border-t border-white/5">
-              <p className="text-[10px] uppercase text-white/40 font-mono mb-4">延迟链路拆解</p>
-              <LatencyTimeline />
-            </div>
+            <LatencyTimeline />
           </TechCard>
         </div>
-        <div className="lg:col-span-6">
-          <TechCard delay={0.4} icon={Activity} title="10秒快筛" subtitle="光谱优化"
-            description="算法优化光谱分析，实现无损快筛。将传统两天等待缩短至10秒，大幅提升质检效率。"
-            stats={[{ label: "拟合优度 (R²)", value: ">0.99" }, { label: "效率提升", value: "99.9%" }]}>
+        <div className="md:col-span-1 lg:col-span-6">
+          <TechCard delay={0.4} icon={Search} title="双维感知" subtitle="光谱 + GAN"
+            description="光谱分析 10 秒无损快筛成分；GAN 网络对抗反光，管理物理环境。"
+            stats={[{ label: "复合置信度", value: ">0.99" }, { label: "数据覆盖率", value: "99.9%" }]}>
             <SpectralChart />
           </TechCard>
         </div>
-        <div className="lg:col-span-6">
-          <TechCard delay={0.5} icon={Layers} title="GAN 扩充缺陷库" subtitle="样本增强"
-            description={'针对强反光等复杂环境干扰，利用生成对抗网络（GAN）后台自动扩充海量缺陷样本。训练出具备"火眼金睛"的识别模型。'}
-            stats={[{ label: "样本规模", value: "1000万+" }, { label: "模型鲁棒性", value: "99.7%" }]}>
-            <div className="mt-6 grid grid-cols-3 gap-2">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="aspect-square rounded-lg bg-white/5 border border-white/10 overflow-hidden relative group">
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity" style={{ backgroundColor: 'rgba(16,185,129,0.1)' }} />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Search size={16} className="text-white/20 group-hover:text-emerald-500 transition-colors" />
-                  </div>
-                  <div className="absolute bottom-1 left-1 text-[8px] font-mono text-white/40">GEN_SAMPLE_{i}</div>
+        <div className="md:col-span-1 lg:col-span-6">
+          <TechCard delay={0.5} icon={Shield} title="工业级装甲" subtitle="终端设备集成"
+            description="终端设备集成双层水冷与正压防尘技术，无惧 800°C 高温与车间粉尘。"
+            stats={[{ label: "耐受温度", value: "800°C+" }, { label: "防护等级", value: "工业级" }]}>
+            <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+              {[
+                { icon: Clock, label: '24/7 全天候运行' },
+                { icon: ShieldCheck, label: 'IP67 级防护' },
+                { icon: Cpu, label: 'FPGA 核心' },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col items-center gap-1.5 sm:gap-2 p-2.5 sm:p-4 rounded-xl bg-white/5 border border-white/10">
+                  <item.icon size={20} className="text-white/40 sm:w-6 sm:h-6" />
+                  <span className="text-[10px] text-white/60 text-center font-mono">{item.label}</span>
                 </div>
               ))}
             </div>
           </TechCard>
         </div>
       </div>
-
-      {/* Footer Stats */}
-      <footer className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/10">
-        {[
-          { label: "光谱范围", value: "380-1100nm" },
-          { label: "算力���值", value: "12.4 TFLOPS" },
-          { label: "缺陷类别", value: "120+ 种类" },
-          { label: "系统可用性", value: "99.999%" }
-        ].map((stat, i) => (
-          <motion.div key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 + i * 0.1 }}>
-            <p className="text-[10px] uppercase text-white/40 font-mono mb-1">{stat.label}</p>
-            <p className="text-xl font-bold tracking-tight">{stat.value}</p>
-          </motion.div>
-        ))}
-      </footer>
     </main>
   </div>
 );

@@ -18,7 +18,7 @@ const data = Array.from({ length: 20 }, (_, i) => ({
 
 export const SpectralChart: React.FC = () => {
   return (
-    <div className="w-full h-48 mt-4">
+    <div className="w-full h-36 sm:h-48 mt-3 sm:mt-4">
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart data={data}>
           <defs>
@@ -56,7 +56,7 @@ export const SpectralChart: React.FC = () => {
           />
         </AreaChart>
       </ResponsiveContainer>
-      <div className="flex justify-between mt-2 text-[10px] font-mono text-white/40">
+      <div className="flex justify-between mt-1.5 sm:mt-2 text-[9px] sm:text-[10px] font-mono text-white/40">
         <span>400nm</span>
         <span>700nm</span>
       </div>
