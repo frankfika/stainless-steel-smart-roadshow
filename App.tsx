@@ -13,7 +13,7 @@ const App: React.FC = () => {
   const [direction, setDirection] = useState(1);
   const [isExporting, setIsExporting] = useState(false);
   const totalSlides = 13;
-  const slides = [Slide1, Slide2, Slide3, Slide9, Slide4, Slide5, Slide6, Slide7, Slide8, Slide13, Slide10, Slide11, Slide12];
+  const slides = [Slide1, Slide2, Slide3, Slide9, Slide7, Slide4, Slide5, Slide6, Slide8, Slide13, Slide10, Slide11, Slide12];
   const pdfContainerRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = useCallback(() => {

@@ -186,7 +186,7 @@ export const Slide4: React.FC<SlideProps> = ({ isActive }) => (
       <header className="mb-6 sm:mb-8 lg:mb-10">
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="flex items-center gap-2 mb-3">
           <div className="w-8 h-[1px]" style={{ backgroundColor: '#10b981' }} />
-          <span className="text-xs font-mono uppercase tracking-[0.3em]" style={{ color: '#10b981' }}>核心能力 01</span>
+          <span className="text-xs font-mono uppercase tracking-[0.3em]" style={{ color: '#10b981' }}>核心技术 I</span>
         </motion.div>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="text-2xl sm:text-4xl lg:text-6xl font-bold tracking-tighter mb-3 sm:mb-4">
           数字眼 <span style={{ color: '#10b981' }}>(机器视觉防呆模块)</span>
